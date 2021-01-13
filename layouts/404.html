@@ -1,7 +1,12 @@
+{{ define "styles" }}
+  {{ $.Scratch.Set "style_opts" (dict "src" "scss/pages/about.scss" "dest" "css/about.css") }}
+{{ end }}
 {{ define "main" }}
-<article>
-  <h1>
-    This is not the page you were looking for
-  </h1>
-</article>
+
+<div class="splash-container">
+  <div class="splash">
+    <h1>404</h1>
+    <h3>Oops! Looks like you're in the wrong page =/</h3>
+  </div>
+</div>
 {{ end }}
