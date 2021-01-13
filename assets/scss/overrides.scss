@@ -2,15 +2,26 @@
 
 // The primary accent color can take any css color property, including hex, named props, rgba etc.
 
+:root {
+  --bg-color: #e8e9ec;
+  --caret-color: #262a3f;
+  --main-color: #2d539e;
+  --sub-color: #262a3f;
+  --text-color: #33374c;
+  --error-color: #cc517a;
+  --error-extra-color: #cc3768;
+  --colorful-error-color: #cc517a;
+  --colorful-error-extra-color: #cc3768;
+}
 
 $themes: (
   lightTheme: (
-    text: #111,
-    low-neutral: #f7f7f7,
-    neutral-table-border: #eeeeee,
-    neutral: #9b9b9b,
+    text: #1d2d50,
+    low-neutral: #282c3b,
+    neutral-table-border: #262a3f,
+    neutral: #33374c,
     high-neutral: #717171,
-    bg: #fff,
+    bg: #fcdab7,
     accent: #9013FE,
     accent-text: #580E99,
     accent-bg: #A56AD9,
