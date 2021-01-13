@@ -9,12 +9,11 @@
     
     <h1>{{ .Params.heading }}<span class="fancy">.</span></h1>
     {{ if isset .Params "handle" }}
-    <span class="handle">@{{ .Params.handle }}</span>
+    <span class="handle">{{ .Params.handle }}</span>
     {{ end }}
     <h2>
       {{ .Params.subheading }}
     </h2>
-    <!-- Replace MEEEEE -->
 
     {{ partial "social-icons.html" .}}
   </div>

@@ -21,7 +21,7 @@
   }
 
   h2 {
-    font-size: 2.25em;
+    font-size: 2em;
     font-weight: 500;
     line-height: 1.25;
     max-width: 22em;
@@ -30,19 +30,25 @@
 }
 
 .fancy {
-  color: $primary;
+  @include theme() {
+    color: theme-get('accent');
+  }
 }
 
 .handle {
   display: inline-block;
   margin-top: 0.275em;
-  color: $grey;
+  @include theme() {
+    color: theme-get('neutral');
+  }
   letter-spacing: 0.5px;
 }
 
 .writing {
   text-decoration: none;
-  color: $primary;
+  @include theme() {
+    color: theme-get('accent');
+  }
 }
 
 /* overrides */

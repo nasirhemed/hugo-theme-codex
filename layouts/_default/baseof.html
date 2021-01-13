@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="darkTheme" id="theme">
 
 <head>
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
@@ -22,6 +22,8 @@
   {{ end }}
 
   {{ partial "favicon.html" }}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
   <!-- Styles -->
   {{ block "styles" . }} {{ end }} <!-- Get "style_opts" variable from "styles" block -->
@@ -44,6 +46,8 @@
   {{- if not .Site.IsServer -}}
       {{ template "_internal/google_analytics_async.html" . }}
   {{- end -}}
+  
+   <script src="/js/dark-mode.js"></script>
 </head>
 
 <body>
