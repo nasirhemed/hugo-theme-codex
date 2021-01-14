@@ -276,3 +276,10 @@ table {
     }
   }
 }
+
+pre {
+  @include theme() {
+    background-color: theme-get('code-bg');
+    color: theme-get('code')  
+  }
+}
