@@ -35,7 +35,8 @@ $themes: (
     accent-text: #580E99,
     accent-bg: #A56AD9,
     code-bg: #eeeeee,
-    code: #222
+    code: #222,
+    language-code: #333
   ),
   darkTheme: (
     text: #fff,
@@ -48,7 +49,8 @@ $themes: (
     accent-text: #A56AD9,
     accent-bg: #580E99,
     code-bg: #222,
-    code: #eeeeee
+    code: #eeeeee,
+    language-code: #eeeeee
   ),
 );
 

@@ -282,4 +282,31 @@ pre {
     background-color: theme-get('code-bg');
     color: theme-get('code')  
   }
+
+  code[class*=language-] {
+    @include theme() {
+      color: theme-get('language-code');
+    }
+  }
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  text-align: center;
+  @include theme() {
+    color: theme-get('neutral');
+  }
+
+  .figtitle {
+    margin-top:5px;
+    font-size: 0.8rem;
+  }
+
+  .caption {
+    margin-top: 0;
+    font-size: 0.6rem;
+  }
 }
