@@ -286,6 +286,10 @@ pre {
   code[class*=language-] {
     @include theme() {
       color: theme-get('language-code');
+
+      .token.label.string { 
+        color: theme-get('language-string');
+      }
     }
   }
 }
