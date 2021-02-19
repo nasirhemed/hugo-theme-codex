@@ -1,0 +1,15 @@
+<script>
+
+    var theme = document.getElementById("theme");
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        theme.className = "darkTheme";
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        theme.className = "lightTheme";
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme.className = "darkTheme"
+    } else {
+        theme.className = "lightTheme"
+    }
+
+</script>

@@ -1,0 +1,16 @@
+<script>
+    var toggleButton = document.getElementById("theme-toggle");
+    var theme = document.getElementById("theme")
+
+    toggleButton.addEventListener("click", () => {
+        if (theme.className === "darkTheme") {
+            theme.className = "lightTheme";
+            localStorage.setItem("pref-theme", "light");
+        } else {
+            theme.className = "darkTheme";
+            localStorage.setItem("pref-theme", "dark")
+        }
+
+    })
+
+</script>

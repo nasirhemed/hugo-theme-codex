@@ -7,6 +7,14 @@ body {
   height: 100%;
 }
 
+html.darkTheme #moon {
+  display: none;
+}
+
+html:not(.darkTheme) #sun {
+  display: none;
+}
+
 html {
   box-sizing: border-box;
 }

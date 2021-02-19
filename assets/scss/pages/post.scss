@@ -188,7 +188,9 @@ $tocBreakpoint: 1024px;
       margin-top: 0;
     }
     &:hover {
-      background-color: #f6f9fc;
+      @include theme() {
+        background-color: theme-get('code-bg') ;
+      }
     }
   }
 }

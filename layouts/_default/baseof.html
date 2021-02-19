@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" class="darkTheme" id="theme">
+<html lang="{{ .Site.LanguageCode }}" id="theme">
 
 <head>
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
@@ -47,10 +47,11 @@
       {{ template "_internal/google_analytics_async.html" . }}
   {{- end -}}
   
-   <script src="/js/dark-mode.js"></script>
 </head>
 
 <body>
+  {{- partialCached "header.html" . .Page}}
+
   {{ partial "burger.html" .}} 
 
   {{ partial "nav.html" .}}
@@ -64,6 +65,8 @@
   {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity | safeHTMLAttr }}" crossorigin="anonymous"></script>
   {{ block "scripts" . }} {{ end }}
+
+  {{- partialCached "footer.html" . .Type .Layout .Params }}
 </body>
 
 </html>
