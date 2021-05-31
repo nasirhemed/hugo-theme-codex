@@ -45,9 +45,9 @@
 
   {{- if not .Site.IsServer -}}
       {{ template "_internal/google_analytics_async.html" . }}
+			<script async defer data-domain="nasirhemed.com" src="https://analytics.nasirhemed.com/js/plausible.js"></script>
   {{- end -}}
   
-  <script async defer data-domain="nasirhemed.com" src="https://analytics.nasirhemed.com/js/plausible.js"></script>
   
 </head>
 
